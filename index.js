@@ -15,4 +15,13 @@ function addTodo(newTodo) {
   displayTodos();
 }
 
-addTodo(`Live Happily Ever After`);
+//addTodo(`Live Happily Ever After`);
+
+//REQ #3 - It should have a function to change a todo
+
+function changeTodo(indexOfCurrentTodo, updatedTodo) {
+  todos[indexOfCurrentTodo] = updatedTodo;
+  displayTodos();
+}
+
+changeTodo(2, `Study MORE!`);
