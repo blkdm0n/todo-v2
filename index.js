@@ -18,7 +18,6 @@ function addTodo(newTodo) {
 //addTodo(`Live Happily Ever After`);
 
 //REQ #3 - It should have a function to change a todo
-
 // function changeTodo(indexOfCurrentTodo, updatedTodo) {
 //   todos[indexOfCurrentTodo] = updatedTodo;
 //   displayTodos();
@@ -26,7 +25,7 @@ function addTodo(newTodo) {
 
 
 
-//REQ #3 - It should have a function to change a todo
+//REQ #3 - It should have a function to change a todo (OPTIMIZED)
 
 function changeTodo(currentTodo, updatedTodo) {
   todos.forEach((todo, index) => {
@@ -41,7 +40,18 @@ function changeTodo(currentTodo, updatedTodo) {
 
 //REQ #4 - It should have a function to delete a todo
 
-function deleteTodo(deletedTodoIndex) {
-  todos.splice(deletedTodoIndex, 1);
+// function deleteTodo(deletedTodoIndex) {
+//   todos.splice(deletedTodoIndex, 1);
+//   displayTodos();
+// }
+
+//REQ #4 - It should have a function to delete a todo (OPTIMIZED)
+
+function deleteTodo(todoToDelete) {
+  todos.forEach((todo, index) => {
+    if (todo === todoToDelete) {
+      todos.splice(index, 1);
+    }
+  })
   displayTodos();
 }
