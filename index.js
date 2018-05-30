@@ -37,4 +37,11 @@ function changeTodo(currentTodo, updatedTodo) {
   displayTodos();
 }
 
-changeTodo(`Get a job with an awesome company`, `Study harder!!!!`);
+//changeTodo(`Get a job with an awesome company`, `Study harder!!!!`);
+
+//REQ #4 - It should have a function to delete a todo
+
+function deleteTodo(deletedTodoIndex) {
+  todos.splice(deletedTodoIndex, 1);
+  displayTodos();
+}
