@@ -19,9 +19,22 @@ function addTodo(newTodo) {
 
 //REQ #3 - It should have a function to change a todo
 
-function changeTodo(indexOfCurrentTodo, updatedTodo) {
-  todos[indexOfCurrentTodo] = updatedTodo;
+// function changeTodo(indexOfCurrentTodo, updatedTodo) {
+//   todos[indexOfCurrentTodo] = updatedTodo;
+//   displayTodos();
+// }
+
+
+
+//REQ #3 - It should have a function to change a todo
+
+function changeTodo(currentTodo, updatedTodo) {
+  todos.forEach((todo, index) => {
+    if (todo === currentTodo) {
+      todos[index] = updatedTodo
+    }
+  });
   displayTodos();
 }
 
-changeTodo(2, `Study MORE!`);
+changeTodo(`Get a job with an awesome company`, `Study harder!!!!`);
